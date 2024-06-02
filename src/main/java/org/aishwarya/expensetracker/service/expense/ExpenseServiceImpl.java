@@ -62,7 +62,6 @@ public class ExpenseServiceImpl implements ExpenseService{
         }
     }
 
-
     private Expense saveOrUpdateExpense(Expense expense, ExpenseIncomeDTO expenseIncomeDTO){
         expense.setTitle(expenseIncomeDTO.getTitle());
         expense.setDate(expenseIncomeDTO.getDate());

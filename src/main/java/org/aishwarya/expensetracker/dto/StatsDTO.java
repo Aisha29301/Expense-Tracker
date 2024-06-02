@@ -6,6 +6,7 @@ import org.aishwarya.expensetracker.entity.Income;
 
 @Data
 public class StatsDTO {
+
     private Double totalIncome;
     private Double totalExpense;
     private Income latestIncome;
@@ -15,4 +16,5 @@ public class StatsDTO {
     private Double maxIncome;
     private Double minExpense;
     private Double maxExpense;
+
 }

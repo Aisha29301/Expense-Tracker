@@ -8,10 +8,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 
-@Document(collection = "expense")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Document(collection = "expense")
 public class Expense {
 
     @Id

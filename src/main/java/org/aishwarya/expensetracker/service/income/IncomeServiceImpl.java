@@ -71,5 +71,4 @@ public class IncomeServiceImpl implements IncomeService{
         return incomeRepository.save(income);
     }
 
-
 }

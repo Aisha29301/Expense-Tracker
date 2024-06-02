@@ -11,10 +11,9 @@ import java.util.Optional;
 
 @Repository
 public interface IncomeRepository extends MongoRepository<Income,String> {
-    List<Income> findByDateBetween(LocalDate startDate, LocalDate endDate);
 
+    List<Income> findByDateBetween(LocalDate startDate, LocalDate endDate);
     @Aggregation({ "{ '$group': { '_id': null, 'totalAmount': { '$sum': '$amount' } } }" })
     Double sumAllAmounts();
-
     Optional<Income> findFirstByOrderByDateDesc();
 }

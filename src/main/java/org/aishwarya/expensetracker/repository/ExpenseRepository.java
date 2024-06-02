@@ -11,11 +11,10 @@ import java.util.Optional;
 
 @Repository
 public interface ExpenseRepository extends MongoRepository<Expense,String> {
-    List<Expense> findByDateBetween(LocalDate startDate, LocalDate endDate);
 
+    List<Expense> findByDateBetween(LocalDate startDate, LocalDate endDate);
     @Aggregation({ "{ '$group': { '_id': null, 'totalAmount': { '$sum': '$amount' } } }" })
     Double sumAllAmounts();
-
     Optional<Expense> findFirstByOrderByDateDesc();
 
 }
